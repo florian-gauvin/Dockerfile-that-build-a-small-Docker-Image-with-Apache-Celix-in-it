@@ -45,7 +45,7 @@ WORkDIR /usr/buildroot-2015.05
 
 RUN make
 
-WORKDIR /root/buildroot-2015.05/output/images
+WORKDIR /usr/buildroot-2015.05/output/images
 
 RUN tar -xf rootfs.tar &&\
 	rm rootfs.tar
@@ -55,7 +55,7 @@ RUN tar -xf rootfs.tar &&\
 WORKDIR /usr/celix-build
 
 RUN cmake ../celix-develop -DWITH_APR=OFF -DCURL_LIBRARY=/usr/buildroot-2015.05/output/images/usr/lib/libcurl.so.4 -DZLIB_LIBRARY=/usr/buildroot-2015.05/output/images/usr/lib/libz.so.1 -DUUID_LIBRARY=/usr/buildroot-2015.05/output/images/usr/lib/libuuid.so -DBUILD_SHELL=TRUE -DBUILD_SHELL_TUI=TRUE -DBUILD_REMOTE_SHELL=TRUE -DBUILD_DEPLOYMENT_ADMIN=ON -DCMAKE_INSTALL_PREFIX=/usr/buildroot-2015.05/output/images/usr && \
-	echo "/usr/bin/cc  -D_GNU_SOURCE -std=gnu99 -Wall  -g CMakeFiles/celix.dir/private/src/launcher.c.o  -o celix -rdynamic ../framework/libcelix_framework.so /usr/buildroot-2015.05/output/images/lib/libpthread.so.0 /usr/buildroot-2015.05/output/images/lib/libdl.so.2 /usr/buildroot-2015.05/output/images/lib/libc.so.6 /usr/buildroot-2015.05/output/images/usr/lib/libcurl.so.4 ../utils/libcelix_utils.so -lm /usr/buildroot-2015.05/output/images/usr/lib/libuuid.so /usr/buildroot-2015.05/output/images/usr/lib/libz.so.1" > /root/celix-build/launcher/CMakeFiles/celix.dir/link.txt && \
+	echo "/usr/bin/cc  -D_GNU_SOURCE -std=gnu99 -Wall  -g CMakeFiles/celix.dir/private/src/launcher.c.o  -o celix -rdynamic ../framework/libcelix_framework.so /usr/buildroot-2015.05/output/images/lib/libpthread.so.0 /usr/buildroot-2015.05/output/images/lib/libdl.so.2 /usr/buildroot-2015.05/output/images/lib/libc.so.6 /usr/buildroot-2015.05/output/images/usr/lib/libcurl.so.4 ../utils/libcelix_utils.so -lm /usr/buildroot-2015.05/output/images/usr/lib/libuuid.so /usr/buildroot-2015.05/output/images/usr/lib/libz.so.1" > /usr/celix-build/launcher/CMakeFiles/celix.dir/link.txt && \
 	make all && \
 	make install-all 
 
