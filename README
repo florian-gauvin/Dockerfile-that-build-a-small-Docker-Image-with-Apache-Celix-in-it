@@ -10,5 +10,6 @@ Finally you will have a docker image named celix.image on your host, you can che
 
 BE CAREFUL : 
 	-You need to have the same docker version than there is in the image, in the image I'm using the latest version of docker by running the following command : wget -qO- https://get.docker.com/ | sh
+	-The configuration file of Buildroot is dependent of the version of buildroot your using. If you want to change Buildroot version you have to create a new configuration file with the new Buildroot. Put it into a git reposirtory, and change the git repository in the Dockerfile.
 
 If you want more information about the dockerfile, see the comments in the Dockerfile.
