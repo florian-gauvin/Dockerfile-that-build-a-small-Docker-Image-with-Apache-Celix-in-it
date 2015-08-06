@@ -2,12 +2,15 @@ To use this dockerfile :
 First, build the dockerfile by running the following command : docker build -t "name-of-the-celix-image-builder" .
 It will create a docker image that can build the docker image with celix in it
 
-Then run the following command : docker run -ti --privileged -v /var/run/docker.sock:/var/run/docker.sock name-of-the-celix-image-builder
+Then run the following command : 
+docker run -ti --privileged -v /var/run/docker.sock:/var/run/docker.sock name-of-the-celix-image-builder
 It will create your final small docker image with Apache Celix in it. The image is about 16MB.
 
-Finally you will have a docker image named celix.image on your host, you can check by running the following command : docker images.
+Finally you will have a docker image named celix.image on your host, you can check by running the following command : 
+docker images
 
 If you want more information about the Dockerfile, see the comments in the Dockerfile.
 
-If you want more information about how I have made the buildroot environment, see the README file in this repository on github : 
+If you want more information about how I have made the buildroot environment, see the README 
+file in this repository on github : 
 https://github.com/florian-gauvin/Buildroot-Celix.git
