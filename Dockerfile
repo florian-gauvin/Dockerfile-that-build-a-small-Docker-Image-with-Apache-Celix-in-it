@@ -50,7 +50,7 @@ WORKDIR /usr/buildroot-2015.05/output/images
 RUN tar -xf rootfs.tar &&\
 	rm rootfs.tar
 
-#Build Celix and link against the libraries in the buildroot environment. It's not a real good way to do so but it's the only one that I have found : I remove the link.txt file and replace it by a one created manualy and not during the configuration, otherwise I don't have all the libraries linked against the environment in buildroot
+#Build Celix and link against the libraries in the buildroot environment. It's not a real good way to do so but it's the only one that I have found : I remove the link.txt file and replace it by a one created manually and not during the configuration, otherwise I don't have all the libraries linked against the environment in buildroot
 
 WORKDIR /usr/celix-build
 
