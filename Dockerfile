@@ -80,5 +80,5 @@ RUN tar -cf rootfs.tar *
 
 ENTRYPOINT for i in `seq 0 100`; do sudo mknod -m0660 /dev/loop$i b 7 $i; done && \
 	service docker start && \
-	docker import - celix.image < rootfs.tar &&\
+	docker import - inaetics/celix-agent < rootfs.tar &&\
 	/bin/bash 
