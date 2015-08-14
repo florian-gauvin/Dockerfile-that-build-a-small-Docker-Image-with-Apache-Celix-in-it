@@ -47,13 +47,7 @@ WORKDIR /usr/buildroot-2015.05/output/images
 RUN tar -xf rootfs.tar &&\
 	rm rootfs.tar
 
-#Install etcd
-
-RUN cd /tmp && curl -k -L https://github.com/coreos/etcd/releases/download/v2.0.12/etcd-v2.0.12-linux-amd64.tar.gz | tar xzf - && \
-cp etcd-v2.0.12-linux-amd64/etcd /usr/buildroot-2015.05/output/images/bin/ && cp etcd-v2.0.12-linux-amd64/etcdctl /usr/buildroot-2015.05/output/images/bin/
-
 #Add the resources
-
 ADD resources /usr/buildroot-2015.05/output/images/tmp
 
 #Build Celix and link against the libraries in the buildroot environment. It's not a real good way to do so but it's the only one that I have found : I remove the link.txt file and replace it by a one created manually and not during the configuration, otherwise I don't have all the libraries linked against the environment in buildroot
