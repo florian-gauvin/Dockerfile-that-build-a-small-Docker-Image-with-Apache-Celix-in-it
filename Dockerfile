@@ -7,12 +7,14 @@ ENV DEBIAN_FRONTEND noninteractive
 #Download all the packages needed
 
 RUN apt-get update && apt-get install -y \
+	build-essential \
 	cmake \
 	git \
 	python \
 	wget \
 	unzip \
 	bc\
+	uuid-dev \
 	language-pack-en \
 	curl \
     	libjansson-dev \
