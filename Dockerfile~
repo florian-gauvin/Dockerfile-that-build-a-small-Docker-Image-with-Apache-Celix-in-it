@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install -y \
 	wget \
 	unzip \
 	bc\
+	uuid-dev \
 	language-pack-en \
 	curl \
     	libjansson-dev \
